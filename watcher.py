@@ -3,7 +3,7 @@ import requests
 
 # Konfiguration (wird später über GitHub Secrets gesetzt)
 # Falls lokal getestet wird, Fallback nutzen
-WATCH = ["time of my life", "down under", "narcotic"]
+WATCH = ["time of my life", "down under", "narcotic", "Back In the High Life Again"]
 URL = "https://api.nrjnet.de/webradio/nrj-nostalgie-de/current/nostalgie.json"
 TOPIC = os.environ.get("NTFY_TOPIC", "phil_radio_alert") 
 
