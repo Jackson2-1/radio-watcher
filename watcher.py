@@ -1,7 +1,7 @@
 import os
 import requests
 
-# Konfiguration (wird später über GitHub Secrets gesetzt)
+# Konfiguration (wird später über GitHub Secrets gesetzt).
 # Falls lokal getestet wird, Fallback nutzen
 WATCH = ["time of my life", "down under", "narcotic"]
 URL = "https://api.nrjnet.de/webradio/nrj-nostalgie-de/current/nostalgie.json"
