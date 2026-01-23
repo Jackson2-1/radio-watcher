@@ -1,0 +1,28 @@
+name: Radio Watcher
+
+on:
+  schedule:
+    # Führt den Job alle 5 Minuten aus (kann bei Free-Tier auch mal 10 min dauern)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Erlaubt manuelles Starten zum Testen
+
+jobs:
+  check-radio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v3
+
+      - name: Python einrichten
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Abhängigkeiten installieren
+        run: |
+          pip install -r requirements.txt
+
+      - name: Skript ausführen
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python watcher.py
