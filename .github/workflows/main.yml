@@ -1,10 +1,11 @@
 name: Radio Watcher
 
 on:
+  push:                  # NEU: Feuert bei jedem Speichern sofort
+  workflow_dispatch: # Erlaubt manuelles Starten zum Testen
   schedule:
     # Führt den Job alle 5 Minuten aus (kann bei Free-Tier auch mal 10 min dauern)
     - cron: '*/6 * * * *'
-  workflow_dispatch: # Erlaubt manuelles Starten zum Testen
 
 jobs:
   check-radio:
