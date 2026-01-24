@@ -1,11 +1,11 @@
-name: Radio Watcher
+name: Radio Check V2
 
 on:
   push:                  # NEU: Feuert bei jedem Speichern sofort
   workflow_dispatch: # Erlaubt manuelles Starten zum Testen
   schedule:
     # Führt den Job alle 5 Minuten aus (kann bei Free-Tier auch mal 10 min dauern)
-    - cron: '*/6 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   check-radio:
