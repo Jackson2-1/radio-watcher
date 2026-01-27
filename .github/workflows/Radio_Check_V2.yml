@@ -1,10 +1,9 @@
 name: Radio Check V2
 
 on:
-  push:                  # NEU: Feuert bei jedem Speichern sofort
-  workflow_dispatch: # Erlaubt manuelles Starten zum Testen
+  push:
+  workflow_dispatch:
   schedule:
-    # Führt den Job alle 5 Minuten aus (kann bei Free-Tier auch mal 10 min dauern)
     - cron: '*/10 * * * *'
 
 jobs:
@@ -20,8 +19,7 @@ jobs:
           python-version: '3.9'
 
       - name: Abhängigkeiten installieren
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Skript ausführen
         env:
