@@ -23,5 +23,5 @@ jobs:
 
       - name: Skript ausführen
         env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_TOPIC: ${{ secrets.PHIL_RADIO_ALERT }}
         run: python watcher.py
